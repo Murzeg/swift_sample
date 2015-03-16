@@ -129,7 +129,7 @@ class GridGenerator
                 var currentTile:TileModel;
                 
                 // adding distracting tiles to the most bottom layer
-                for n in 0...gridMetrics
+                for var n = 0; n < gridMetrics.count; ++n
                 {
                     randomDistractingTileIndex = Int( arc4random_uniform( UInt32( distractingTilesList.count) ) );
                     
@@ -197,7 +197,7 @@ class GridGenerator
         var currentRowArray:[ TilesStack ] = [];
         
         // arrange grid for the view
-        for i in 0...gridTileStacks.count
+        for var i = 0; i < gridTileStacks.count; ++i
         {
             currentTile = gridTileStacks[i];
             
@@ -216,9 +216,9 @@ class GridGenerator
         
         
         // populate row and column properties
-        for i in 0...rowsArray.count
+        for var i = 0; i < rowsArray.count; ++i
         {
-            for t in 0...rowsArray[i].count
+            for var t = 0; t < rowsArray[i].count; ++t
             {
                 currentTile = rowsArray[i][t];
                 
